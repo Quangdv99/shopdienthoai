@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quản lý sản phẩm</title>
+    <link href="images/internet.png" rel="Icon">
+    <!-- Liên kết file CSS Bootstrap 4 -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Liên kết Jquery Bootstrap 4 -->
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <!-- Liên kết JS Bootstrap 4 -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <!-- Liên kết thư viện Angular JS -->
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.js"></script>
+    <!-- Thư viện Icon -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body class="bg-info" ng-app="myApp" ng-controller="myCtrl">
+    <header >
+        <div class="container-fluid bg-warning">
+    <div class="container">
+        <div class="row">
+            <ul class="mr-auto col-xs-7 col-sm-7 col-md-7 col-lg-7 mt-1">
+                <li style="float: left;list-style: none;">
+                    <a class="active" href="#">
+                        <span class="badge badge-primary fas fa-link"> Follow :</span>
+                    </a>
+                </li>
+                <li style="float: left;list-style: none; margin-left: 10px">
+                    <a class="" href="#">
+                        <span class="badge badge-primary fab fa-facebook-f"> Facebook</span>
+                    </a>
+                </li>
+                <li style="float: left;list-style: none;margin-left: 10px">
+                    <a class="" href="#">
+                        <span class="badge badge-info fab fa-instagram"> Instagram</span>
+                    </a>
+                </li>
+                <li style="float: left;list-style: none;margin-left: 10px">
+                    <a class="" href="#">
+                        <span class="badge badge-info fab fa-twitter">Twitter</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="nav ml-auto col-xs-5">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">
+                        <button type="submit" data-toggle="modal" data-target="#myModal"
+                            class="btn btn-outline-primary text-center"
+                            style="height: 20px;font-size: 10px;line-height: 5px;font-weight: bold">Admin</button>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="modal" id="myModal">
+    <div class="modal-dialog modal-xs modal-sm modal-md modal-lg">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Đăng nhập tài khoản</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form action="#" method="POST" name="frmbai4">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 mt-3 ">
+                            <input id="manv04" name="manv04" type="text" class="form-control"
+                                placeholder="Tên đăng nhập">
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 mt-3">
+                            <input id="hvt04" name="hvt04" type="text" class="form-control" placeholder="Mật khẩu">
+                        </div>
+                    </div>
+                    <br>
+                    <!-- Modal footer -->
+                    <div class="modal-footer row">
+                        <button type="submit" class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top"
+                            title="Lưu thông tin!"><i class="far fa-save"></i> Đăng
+                            nhập</button>
+                        <button type="submit" class="btn btn-outline-dark" data-dismiss="modal" data-toggle="tooltip"
+                            data-placement="top" title="Hủy bỏ!"> <i class="fas fa-square"></i> Hủy</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--  -->
+<div class="container">
+    <div class="row mb-2 mt-2">
+        <a href="index.html" style="text-decoration: none">
+            <h1 class="shopping-mail">Trang quản trị hệ thống</h1>
+        </a>
+        <img src="images/admin.png" alt="">
+    </div>
+
+</div>
+<div class="container-fluid bg-light">
+    <nav class="navbar navbar-expand-sm navbar-expand-md navbar-expand-lg navbar-warning container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon fas fa-list"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link fas fa-home" href="index.html">Trang chủ <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle fas fa-cog" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Quản lý
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="maneger.html">Sản phẩm</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="maneger_money.html">Lương thưởng nhân viên</a>
+                    </div>
+                </li>
+            </ul>
+            <form method="POST" class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" ng-model="strSearch"  placeholder="Search"
+                    >
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+</div>
+    </header>
+    <section class="container">
+        <br>
+        <div class="row bg-danger rounded ">
+            <h3 class="text-white col-12 col-sm-12" style="font-weight: bold">
+                Hệ thống quản lý sản phẩm <i class="fas fa-tools"></i>
+            </h3>
+        </div>
+
+        <div class="row mt-2">
+            <div class="card col-xs-12 col-sm-12 col-md-2 col-lg-12">
+                <form method="POST" name="frmQuantrisanpham" ng-submit="checkOnSubmit($event)">
+                    <div class="form-group">
+                        <label for="masp" class="text-body" style="font-weight: bold">Mã sản phẩm</label>
+                        <input type="text" class="form-control" id="maso" name="txtMasp" ng-model="masp1" required
+                            >
+                        <span class="text-danger" ng-show="frmQuantrisanpham.txtMasp.$invalid">
+                           Vui lòng điền mục này !
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label for="tensp" class="text-body" style="font-weight: bold">Tên sản phẩm</label>
+                        <input type="text" class="form-control" id="tensp" name="txtTensp" ng-model="tensp1" required
+                            minlength="3">
+                        <span class="text-danger" ng-show="frmQuantrisanpham.txtTensp.$invalid">
+                            Yêu cầu tối thiểu 3 kí tự !
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label for="hinhanh" class="text-body" style="font-weight: bold">Hình ảnh</label>
+                        <input type="file" class="form-control" id="hinhanh" name="txtHinhanh" ng-model="hinhanh1">
+                        <img src="images/{{hinhanh1}}" alt="{{hinhanh1}}" title="{{hinhanh1}}" class="img-fluid mx-auto d-block" width="200">
+                    </div>
+                    <div class="form-group">
+                        <label for="hsx" class="text-body" style="font-weight: bold">Hãng sản xuất</label>
+                        <input type="text" class="form-control" id="hsx" name="txtHangsx" ng-model="hangsanxuat1"
+                            required minlength="2">
+                        <span class="text-danger" ng-show="frmQuantrisanpham.txtHangsx.$invalid">
+                            Yêu cầu tối thiểu 2 kí tự !
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label for="soluong" class="text-body" style="font-weight: bold">Số lượng</label>
+                        <input type="number" class="form-control" id="soluong" name="txtSoluong" ng-model="soluong1"
+                            required min="1">
+                        <span class="text-danger" ng-show="frmQuantrisanpham.txtSoluong.$invalid">
+                            Yêu cầu nhập số và tối thiểu là 1 !
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label for="xuatxu" class="text-body" style="font-weight: bold">Xuất xứ</label>
+                        <input type="text" class="form-control" id="xuatxu" name="txtXuatxu" ng-model="xuatxu1"
+                            required>
+                        <span class="text-danger" ng-show="frmQuantrisanpham.txtXuatxu.$invalid">
+                            Vui lòng điền mục này !
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label for="gianhap" class="text-body" style="font-weight: bold">Giá nhập</label>
+                        <input type="number" min="1" class="form-control" id="gianhap" name="txtGianhap"
+                            ng-model="gianhap1" required min="1">
+                        <span class="text-danger" ng-show="frmQuantrisanpham.txtGianhap.$invalid">
+                            Yêu cầu nhập số và tối thiểu là 1 !
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label for="giaban" class="text-body" style="font-weight: bold">Giá bán</label>
+                        <input type="number" class="form-control" id="giabangiaban" name="txtGiaban" ng-model="giaban1"
+                            required min="1">
+                        <span class="text-danger" ng-show="frmQuantrisanpham.txtGiaban.$invalid">
+                            Yêu cầu nhập số và tối thiểu là 1 !
+                        </span>
+                    </div>
+                    <hr>
+                    <div class="form-group mx-auto">
+                        <button type="submit" class="btn btn-success" ng-click="insert()">Thêm sản phẩm</button>
+                        <button type="button" class="btn btn-info" ng-click="update()">Sửa thông tin</button>
+                        <!-- <button type="button" class="btn btn-dark" ng-click="cancel()">Hủy chọn</button> -->
+                        <button type="button" class="btn btn-light" ng-click="clear()">Mới</button>
+                    </div>
+                    <div class="form-group">
+                        <label for="timkiem" class="text-info" style="font-weight:bold">Tìm kiếm sản phẩm</label>
+                        <input class="form-control mr-sm-2" type="search" ng-model="strSearch"
+                            placeholder="Nhập từ khóa cần tìm..." aria-label="Search">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row bg-danger rounded   mt-3">
+            <h3 class="text-white col-12 col-sm-12" style="font-weight: bold">
+                Hiển thị thông tin sản phẩm <i class="fas fa-tools"></i>
+            </h3>
+        </div>
+        <div class="row ">
+            <table
+                class="table table-hover table-responsive-xs table-responsive-sm table-responsive-md table-responsive-lg table-striped table-bordered table-primary table-responsive-sm table-responsive-md">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Mã sản phẩm </th>
+                        <th>Tên Sản Phẩm </th>
+                        <th>Hình Ảnh</th>
+                        <th>Hãng Sản Xuất</th>
+                        <th>Số Lượng</th>
+                        <th>Xuất Sứ</th>
+                        <th>Giá Bán</th>
+                        <th>Giá Nhập</th>
+                        <th>Sửa</th>
+                        <th>Xóa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="sp in products| filter: strSearch|orderBy:tensp|limitTo:8:begin">
+                        <td>{{$index+1}}</td>
+                        <td>{{sp.masp}}</td>
+                        <td>{{sp.tensp|uppercase}}</td>
+                        <td><img src="images/{{sp.hinhanh}}" alt="{{sp.hinhanh}}" title="{{sp.hinhanh}}"
+                                style="width: 40%" class="mx-auto img-fluid"></td>
+                        <td>{{sp.hangsanxuat|uppercase}}</td>
+                        <td>{{sp.soluong}}</td>
+                        <td>{{sp.xuatsu}}</td>
+                        <td>{{sp.giaban}}</td>
+                        <td>{{sp.gianhap}}</td>
+                        <td>
+                            <a href="#!" class="text-white" ng-click="edititem($index)">
+                                <button type="button" class="btn btn-info "> Sửa
+                                </button>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="#!" class="text-white" ng-click="delete($index)">
+                                <button type="button" class="btn btn-warning "> Xóa
+                                </button>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </ul>
+            <ul class="pagination mx-auto">
+                <li class="page-item" style="padding: 5px">
+                    <a class="page-link rounded" href="#!" ng-click="first()">
+                        <i class="far fa-hand-point-up "></i>
+                    </a>
+                </li>
+                <li class="page-item " style="padding: 5px">
+                    <a class="page-link rounded" href="#!" ng-click="prev()">
+                        <i class="far fa-hand-point-left"></i>
+                    </a>
+                </li>
+                <li class="page-item" style="padding: 5px">
+                    <a class="page-link rounded" href="#!" ng-click="next()">
+                        <i class="far fa-hand-point-right"></i>
+                    </a>
+                </li>
+                <li class="page-item" style="padding: 5px">
+                    <a class="page-link rounded" href="#!" ng-click="last()">
+                        <i class="far fa-hand-point-down"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <footer id="footer" class="mt-2" ng-include="'include/maneger/Footer.html'"></footer>
+    <!-- <script src="js/products.js"></script> -->
+    <script src="js/maneger.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cửa hàng điện thoại</title>
+    <link href="images/internet.png" rel="Icon">
+    <!-- Liên kết file CSS Bootstrap 4 -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Liên kết Jquery Bootstrap 4 -->
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <!-- Liên kết JS Bootstrap 4 -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <!-- Liên kết thư viện Angular JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="js/angular-route.js"></script>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-animate.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+    <!-- Thư viện Icon -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="css/index.css"> -->
+    <link rel="stylesheet" href="css/product.css">
+    <!-- Thư viện cơ sở dữ liệu sản phẩm -->
+    <script src="js/datasp.js"></script>
+
+
+    </h4>
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+    <header ng-include="'include/Header.html'"></header>
+    <section class="container">
+        <ng-view></ng-view>
+    </section>
+    <footer id="footer" class="mt-2" ng-include="'include/Footer.html'"></footer>
+
+</body>
+
+</html>

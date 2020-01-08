@@ -1,0 +1,313 @@
+ [
+    {
+        "masp": 1,
+        "tensp": "Huawei P30",
+        "hinhanh": "huawei-p30-lite-1-400x400.jpg",
+        "hangsanxuat": "Huawei",
+        "soluong": 30,
+        "xuatsu": "China",
+        "gianhap": 7000000,
+        "giaban": 7300000,
+        "Screen": "LCD Full HD+",
+        "Ram": "6 GB",
+        "Rom": "64 GB",
+        "Camera": "16 MP",
+        "CPU": "Snap dragon 660"
+
+
+    },
+    {
+        "masp": 2,
+        "tensp": "Huawei Nova 3i",
+        "hinhanh": "huawei-mate-20-black-400x400.jpg",
+        "hangsanxuat": "Huawei",
+        "soluong": 10,
+        "xuatsu": "China",
+        "gianhap": 6000000,
+        "giaban": 6300000,
+        "Screen": "LCD Full HD",
+        "Ram": "4 GB",
+        "Rom": "32 GB",
+        "Camera": "16 MP",
+        "CPU": "Snap dragon 660"
+
+
+    },
+    {
+        "masp": 3,
+        "tensp": "Nokia 8.1",
+        "hinhanh": "nokia-61-plus-2-400x400.jpg",
+        "hangsanxuat": "Nokia",
+        "soluong": 15,
+        "xuatsu": "China",
+        "gianhap": 8000000,
+        "giaban": 8300000,
+        "Screen": "LCD Full HD+",
+        "Ram": "4 GB",
+        "Rom": "64 GB",
+        "Camera": "24 MP",
+        "CPU": "Snap dragon 620"
+
+
+    },
+    {
+        "masp": 4,
+        "tensp": "Oppo A3s",
+        "hinhanh": "vsmart-active-1-plus-blue-400x400.jpg",
+        "hangsanxuat": "Oppo",
+        "soluong": 12,
+        "xuatsu": "China",
+        "gianhap": 4000000,
+        "giaban": 4300000,
+        "Screen": "LCD Full HD+",
+        "Ram": "6 GB",
+        "Rom": "64 GB",
+        "Camera": "16 MP",
+        "CPU": "Snap dragon 660"
+
+    },
+    {
+        "masp": 5,
+        "tensp": "Xiaomi Mi 8",
+        "hinhanh": "asus-zenfone-max-pro-m1-400x400.jpg",
+        "hangsanxuat": "Xiaomi",
+        "soluong": 30,
+        "xuatsu": "China",
+        "gianhap": 6000000,
+        "giaban": 6500000,
+        "Screen": "LCD Full HD",
+        "Ram": "4 GB",
+        "Rom": "32 GB",
+        "Camera": "16 MP",
+        "CPU": "Snap dragon 660"
+
+
+    },
+    {
+        "masp": 7,
+        "tensp": "Vivo V15 Plus+",
+        "hinhanh": "vivo-v15-6-400x400.jpg",
+        "hangsanxuat": "Vivo",
+        "soluong": 20,
+        "xuatsu": "China",
+        "gianhap": 5000000,
+        "giaban": 5300000,
+        "Screen": "LCD Full HD+",
+        "Ram": "4 GB",
+        "Rom": "64 GB",
+        "Camera": "24 MP",
+        "CPU": "Snap dragon 620"
+
+    },
+    {
+        "masp": 8,
+        "tensp": "I Phone XS Max",
+        "hinhanh": "iphone-xs-max-512gb-gold-400x400.jpg",
+        "hangsanxuat": "Apple",
+        "soluong": 30,
+        "xuatsu": "China",
+        "gianhap": 7000000,
+        "giaban": 7300000,
+        "Screen": "Oled Full 2K",
+        "Ram": "6 GB",
+        "Rom": "126 GB",
+        "Camera": "16 MP",
+        "CPU": "Aplle A11"
+
+    },
+    {
+        "masp": 9,
+        "tensp": "Samsung S10 Plus",
+        "hinhanh": "samsung-galaxy-s10-plus-512gb-ceramic-black-400x400.jpg",
+        "hangsanxuat": "Samsung",
+        "soluong": 30,
+        "xuatsu": "Korena",
+        "gianhap": 19000000,
+        "giaban": 12000000,
+        "Screen": "Amoled 2K",
+        "Ram": "6 GB",
+        "Rom": "64 GB",
+        "Camera": "16 MP",
+        "CPU": "Enysox 9980"
+
+    },
+    {
+        "masp": 10,
+        "tensp": "VSamrt Joy 1",
+        "hinhanh": "vsmart-joy-1-black-400x400.jpg",
+        "hangsanxuat": "VinGroup",
+        "soluong": 50,
+        "xuatsu": "VietNamese",
+        "gianhap": 2100000,
+        "giaban": 2900000,
+        "Screen": "LCD Full HD+",
+        "Ram": "6 GB",
+        "Rom": "64 GB",
+        "Camera": "16 MP",
+        "CPU": "Snap dragon 660"
+
+    },
+    {
+        "masp": 11,
+        "tensp": "Vsmart Active 1+",
+        "hinhanh": "vsmart-active-1-plus-blue-400x400.jpg",
+        "hangsanxuat": "VinGroup",
+        "soluong": 30,
+        "xuatsu": "VietNamese",
+        "gianhap": 5000000,
+        "giaban": 5400000,
+        "Screen": "LCD Full HD+",
+        "Ram": "6 GB",
+        "Rom": "64 GB",
+        "Camera": "16 MP",
+        "CPU": "Snap dragon 660"
+
+    },
+    {
+        "masp": 12,
+        "tensp": "Vsmart Active 1",
+        "hinhanh": "vsmart-active-1-plus-blue-400x400.jpg",
+        "hangsanxuat": "VinGroup",
+        "soluong": 30,
+        "xuatsu": "VietNamese",
+        "gianhap": 3400000,
+        "giaban": 4100000,
+        "Screen": "LCD Full HD+",
+        "Ram": "6 GB",
+        "Rom": "64 GB",
+        "Camera": "16 MP",
+        "CPU": "Snap dragon 660"
+
+    },
+    {
+        "masp": 13,
+        "tensp": "Vsmart Active 1 Plus",
+        "hinhanh": "vsmart-active-1-white-400x400.jpg",
+        "hangsanxuat": "VinGroup",
+        "soluong": 30,
+        "xuatsu": "VietNamese",
+        "gianhap": 3400000,
+        "giaban": 4100000,
+        "Screen": "LCD Full HD+",
+        "Ram": "6 GB",
+        "Rom": "64 GB",
+        "Camera": "16 MP",
+        "CPU": "Snap dragon 660"
+
+    },
+    {
+        "masp": 14,
+        "tensp": "Samsung S10 Plus",
+        "hinhanh": "samsung-galaxy-s10-plus-512gb-ceramic-black-400x400.jpg",
+        "hangsanxuat": "Samsung",
+        "soluong": 30,
+        "xuatsu": "Korena",
+        "gianhap": 19000000,
+        "giaban": 12000000,
+        "Screen": "Amoled 2K",
+        "Ram": "6 GB",
+        "Rom": "64 GB",
+        "Camera": "16 MP",
+        "CPU": "Enysox 9980"
+
+    },
+    {
+        "masp": 15,
+        "tensp": "Oppo F11S-MTP",
+        "hinhanh": "oppo-f11-mtp-400x400.jpg",
+        "hangsanxuat": "OPPO",
+        "soluong": 12,
+        "xuatsu": "China",
+        "gianhap": 7000000,
+        "giaban": 7999000,
+        "Screen": "Màn hình Full HD",
+        "Ram": "4 GB",
+        "Rom": "64 GB",
+        "Camera": "23 MP",
+        "CPU": "Mediatek 9980"
+
+    },
+    {
+        "masp": 16,
+        "tensp": "ViVo V15",
+        "hinhanh": "vivo-v15-quanghai-400x400.jpg",
+        "hangsanxuat": "ViVo",
+        "soluong": 12,
+        "xuatsu": "China",
+        "gianhap": 6000000,
+        "giaban": 6999000,
+        "Screen": "Màn hình Full HD",
+        "Ram": "4 GB",
+        "Rom": "64 GB",
+        "Camera": "18 MP",
+        "CPU": "Mediatek 7756"
+
+    },
+    {
+        "masp": 17,
+        "tensp": "Blackberry Evolve",
+        "hinhanh": "blackberry-evolve-black-400x400.jpg",
+        "hangsanxuat": "Blackberry",
+        "soluong": 12,
+        "xuatsu": "China",
+        "gianhap": 6000000,
+        "giaban": 6999000,
+        "Screen": "Màn hình Full HD+",
+        "Ram": "4 GB",
+        "Rom": "64 GB",
+        "Camera": "13 MP",
+        "CPU": "Snapdragon 450"
+
+    },
+    {
+        "masp": 18,
+        "tensp": "OPPO Find X",
+        "hinhanh": "oppo-find-x-1-400x400.jpg",
+        "hangsanxuat": "OPPO",
+        "soluong": 12,
+        "xuatsu": "China",
+        "gianhap": 15000000,
+        "giaban": 15990000,
+        "Screen": "Màn hình Full HD+",
+        "Ram": "6 GB",
+        "Rom": "64 GB",
+        "Camera": "24 MP",
+        "CPU": "Snapdragon 845"
+
+    },
+    {
+        "masp": 19,
+        "tensp": "Samssung glaxy j4",
+        "hinhanh": "samsung-galaxy-j4-core-1-400x400.jpg",
+        "hangsanxuat": "Samsung",
+        "soluong": 12,
+        "xuatsu": "China",
+        "gianhap": 3000000,
+        "giaban": 3400000,
+        "Screen": "Màn hình  HD+",
+        "Ram": "2 GB",
+        "Rom": "32 GB",
+        "Camera": "13 MP",
+        "CPU": "Snapdragon 456"
+
+    },
+    {
+        "masp": 20,
+        "tensp": "Iphone XR white",
+        "hinhanh": "iphone-xr-256gb-white-400x400.jpg",
+        "hangsanxuat": "Apple",
+        "soluong": 12,
+        "xuatsu": "China",
+        "gianhap": 20000000,
+        "giaban": 21000000,
+        "Screen": "Màn hình Full HD+",
+        "Ram": "3 GB",
+        "Rom": "256 GB",
+        "Camera": "12 MP",
+        "CPU": "Apple A12"
+
+    }
+
+
+
+]

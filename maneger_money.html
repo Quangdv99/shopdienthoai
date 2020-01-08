@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quản lý sản phẩm</title>
+    <link href="images/internet.png" rel="Icon">
+    <!-- Liên kết file CSS Bootstrap 4 -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Liên kết Jquery Bootstrap 4 -->
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <!-- Liên kết JS Bootstrap 4 -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <!-- Liên kết thư viện Angular JS -->
+    <script src="js/angular.min.js"></script>
+    <!-- Thư viện Icon -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body  class="bg-info" ng-app="myApp" ng-controller="myCtrl">
+    <header>
+        <div class="container-fluid bg-warning">
+            <div class="container">
+                <div class="row">
+                    <ul class="mr-auto col-xs-7 col-sm-7 col-md-7 col-lg-7 mt-1">
+                        <li style="float: left;list-style: none;">
+                            <a class="active" href="#">
+                                <span class="badge badge-primary fas fa-link"> Follow :</span>
+                            </a>
+                        </li>
+                        <li style="float: left;list-style: none; margin-left: 10px">
+                            <a class="" href="#">
+                                <span class="badge badge-primary fab fa-facebook-f"> Facebook</span>
+                            </a>
+                        </li>
+                        <li style="float: left;list-style: none;margin-left: 10px">
+                            <a class="" href="#">
+                                <span class="badge badge-info fab fa-instagram"> Instagram</span>
+                            </a>
+                        </li>
+                        <li style="float: left;list-style: none;margin-left: 10px">
+                            <a class="" href="#">
+                                <span class="badge badge-info fab fa-twitter">Twitter</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav ml-auto col-xs-5">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                <button type="submit" data-toggle="modal" data-target="#myModal"
+                                    class="btn btn-outline-primary text-center"
+                                    style="height: 20px;font-size: 10px;line-height: 5px;font-weight: bold">Admin</button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="myModal">
+            <div class="modal-dialog modal-xs modal-sm modal-md modal-lg">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Đăng nhập tài khoản</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <form action="#" method="POST" name="frmbai4">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 mt-3 ">
+                                    <input id="manv04" name="manv04" type="text" class="form-control"
+                                        placeholder="Tên đăng nhập">
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-6 mt-3">
+                                    <input id="hvt04" name="hvt04" type="text" class="form-control"
+                                        placeholder="Mật khẩu">
+                                </div>
+                            </div>
+                            <br>
+                            <!-- Modal footer -->
+                            <div class="modal-footer row">
+                                <button type="submit" class="btn btn-outline-dark" data-toggle="tooltip"
+                                    data-placement="top" title="Lưu thông tin!"><i class="far fa-save"></i> Đăng
+                                    nhập</button>
+                                <button type="submit" class="btn btn-outline-dark" data-dismiss="modal"
+                                    data-toggle="tooltip" data-placement="top" title="Hủy bỏ!"> <i
+                                        class="fas fa-square"></i> Hủy</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div class="container">
+            <div class="row mb-2">
+
+                <a href="index.html" style="text-decoration: none">
+                    <h1 class="shopping-mail">Trang quản trị hệ thống</h1>
+                </a>
+
+                <img src="images/admin.png" alt="">
+            </div>
+
+        </div>
+        <div class="container-fluid bg-light">
+            <nav class="navbar navbar-expand-sm navbar-expand-md navbar-expand-lg navbar-warning container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fas fa-list"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link fas fa-home" href="index.html">Trang chủ <span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle fas fa-cog" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Quản lý
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="maneger.html">Sản phẩm</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="maneger_money.html">Lương thưởng nhân viên</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section class="container">
+        <br>
+        <div class="row">
+            <div class="card col-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item  list-group-item-success"
+                        style="font-weight: bold;margin-left: -17px;margin-right: -17px">TÍNH LƯƠNG THƯỞNG NHÂN VIÊN
+                    </li>
+                    <form class="mt-2 mb-2 ml-2 mr-2" name="frmTinhluong">
+                        <div class="form-group">
+                            <label for="hvt">Họ và tên</label>
+                            <input type="text" id="hvt" name="txtHvt" class="form-control" ng-model="fullname" required>
+                            <span ng-show="frmTinhluong.txtHvt.$invalid" class="text-danger">
+                                Vui lòng nhập mục này !
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label for="luong">Lương</label>
+                            <div class="input-group mb-3">
+                                <input type="number" id="luong" name="txtLuong" class="form-control"
+                                    aria-label="Amount (to the nearest dollar)" ng-model="salary" required>
+                                <div class="input-group-append">
+                                    <span class="input-group-text">VNĐ</span>
+                                </div>
+                            </div>
+                            <span ng-show="frmTinhluong.txtLuong.$invalid" class="text-danger">
+                                Vui lòng nhập mục này !
+                            </span>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="gioitinh">Giới tính</label>
+                            <input type="radio" id="gioitinh" name="gioitinh" ng-model="gender" value="NAM"> Nam
+                            <input type="radio" id="gioitinh" name="gioitinh" ng-model="gender" value="NU"> Nữ
+                        </div>
+                        <div class="form-group">
+                            <label for="age">Độ tuổi</label>
+                            <select name="age" id="age" ng-model="age" ng-options="x.age for x in ages"
+                                class="form-control"></select>
+                        </div>
+                        <div class="form-group">
+                            <label>TIỀN THƯỞNG: <strong class="text-danger">{{getBouns()|number:2}}</strong> VNĐ
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary" ng-click="thanhtien()">Thêm</button>
+                            <button class="btn btn-warning" ng-click="printToCart('printSectionId')">In <i
+                                class="fas fa-print"></i></button>
+                        </div>
+                    </form>
+
+                </ul>
+            </div>
+        </div>
+        <div class="row mt-2" id="printSectionId">
+            <table  class="table table-striped table-bordered table-hover table-light">
+                <thead>
+                    <tr>
+                        <th class="text-center">STT</th>
+                        <th class="text-center">TÊN NHÂN VIÊN</th>
+                        <th class="text-center">LƯƠNG CƠ BẢN</th>
+                        <th class="text-center">GIỚI TÍNH</th>
+                        <th class="text-center">TIỀN THƯỞNG</th>
+                        <th class="text-center">Xóa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr  ng-repeat="m in money">
+                        <td >{{$index}}</td>
+                        <td>{{m.tennv}}</td>
+                        <td>{{m.luongcb}}</td>
+                        <td>{{m.gioitinh}}</td>
+                        <td>{{m.tienthuong}}</td>
+                        <td>
+                            <button class="btn btn-warning" ng-click="delete($index)"> <i
+                                    class="fas fa-trash-alt"></i></button>
+                        </td>
+                        <td>
+                          
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <script>
+            var app = angular.module("myApp", []);
+            app.controller("myCtrl", function ($scope) {
+
+                $scope.ages = [
+                    {
+                        age: "Dưới 25",
+                        rate: 0.07
+                    },
+                    {
+                        age: "Từ 25 đến 40",
+                        rate: 0.1
+                    },
+                    {
+                        age: "Trên 40",
+                        rate: 0.15
+                    }
+                ];
+                $scope.age = $scope.ages[1];
+                $scope.gender = "NAM";
+                $scope.getBouns = function () {
+                    var bouns = $scope.age.rate * $scope.salary;
+                    if ($scope.gender == "NU") {
+                        bouns += 200000;
+                    }
+                    return bouns;
+                }
+                $scope.money = [];
+                // Hàm xóa tiền lương
+                $scope.delete = function () {
+                    $scope.money.splice($scope.index, 1);
+                }
+                // Hàm thêm tiền lương
+                $scope.thanhtien = function () {
+                    $scope.money.push(
+                        {
+                            tennv: $scope.fullname,
+                            luongcb: $scope.salary,
+                            gioitinh: $scope.gender,
+                            tienthuong: $scope.bouns
+                        }
+                    )
+
+                }
+                // In tiền thưởng nhân viên
+                $scope.printToCart = function (printSectionId) {
+                    var innerContents = document.getElementById(printSectionId).innerHTML;
+                    var popupWinindow = window.open('', '_blank', 'width=600,height=700,scrollbars=no,menubar=no,toolbar=no,location=no,status=no,titlebar=no');
+                    popupWinindow.document.open();
+                    popupWinindow.document.write('<html><head><link rel="stylesheet" type="text/css" href="style.css" /></head><body onload="window.print()">' + innerContents + '</html>');
+                    popupWinindow.document.close();
+                }
+
+            });
+        </script>
+
+    </section>
+    <footer id="footer" class="mt-2">
+        <!-- Footer -->
+        <div class="container">
+            <div class="row text-center text-xs-center text-sm-left text-md-left">
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                    <h5>Chăm sóc khách hàng</h5>
+                    <ul class="list-unstyled quick-links">
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Trung tâm trợ
+                                giúp</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Hướng dẫn mua
+                                hàng</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Thanh toán</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Vận chuyển</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Chính sách bảo
+                                hành</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                    <h5>Về cửa hàng</h5>
+                    <ul class="list-unstyled quick-links">
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Giới thiệu về cửa
+                                hàng</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Tuyển dụng</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Điều khoản</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Chính sách bảo
+                                mật</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Kênh người bán</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                    <h5>Chính sách</h5>
+                    <ul class="list-unstyled quick-links">
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Chính sách mua
+                                hàng</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Chính sách đãi
+                                ngộ</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Thông tin khách
+                                hàng</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Thông tin tuyển
+                                dụng</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Bảo mật</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                    <h5>Liên hệ</h5>
+                    <ul class="list-unstyled quick-links">
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>218,Xã
+                                EaÔ,Eakar,ĐắkLắk</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Điện
+                                thoại:0379850696</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Fax: 0123456789</a>
+                        </li>
+                        <li><a href="javascript:void();"><i
+                                    class="fa fa-angle-double-right"></i>Email:Quang850696@gmail.com</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Trực tuyến:
+                                24/7</a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5  text-center">
+                    <img src="images/dathongbao.png" width="200" class="img-fluid">
+                    <img src="images/dadangky.png" width="200" class="img-fluid">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+                    <ul class="list-unstyled list-inline social text-center">
+                        <li class="list-inline-item"><a href="javascript:void();">
+                                <i class="fab fa-facebook-square"></i></a>
+                        </li>
+                        <li class="list-inline-item"><a href="javascript:void();"><i
+                                    class="fab fa-twitter-square"></i></i></a>
+                        </li>
+                        <li class="list-inline-item"><a href="javascript:void();"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li class="list-inline-item"><a href="javascript:void();">
+                                <i class="fab fa-google"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void();" target="_blank"><i
+                                    class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+                </hr>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+                    <p class="h6">&copy Bản quyền thuộc về Quangdvpk00884_ASSIGNMENT_Front-End Frameworks.</p>
+                </div>
+                </hr>
+            </div>
+        </div>
+        <!-- ./Footer -->
+    </footer>
+
+
+</body>
+
+</html>

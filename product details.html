@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chi tiết sản phẩm</title>
+    <link href="images/internet.png" rel="Icon">
+    <!-- Liên kết file CSS Bootstrap 4 -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Liên kết Jquery Bootstrap 4 -->
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <!-- Liên kết JS Bootstrap 4 -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <!-- Liên kết thư viện Angular JS -->
+    <script src="js/angular.min.js"></script>
+    <!-- Thư viện Icon -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+    <!-- Thư viện Data Angular JS -->
+    <script src="js/datachitietsanpham.js"></script>
+    <!-- CSS custom -->
+    <link rel="stylesheet" href="css/detailpr.css">
+</head>
+
+<body ng-app="myApp">
+    <header>
+        <div class="container-fluid bg-warning">
+            <div class="container">
+                <div class="row">
+                    <ul class="mr-auto col-xs-7 col-sm-7 col-md-7 col-lg-7 mt-1">
+                        <li style="float: left;list-style: none;">
+                            <a class="active" href="#">
+                                <span class="badge badge-primary fas fa-link"> Follow :</span>
+                            </a>
+                        </li>
+                        <li style="float: left;list-style: none; margin-left: 10px">
+                            <a class="" href="#">
+                                <span class="badge badge-primary fab fa-facebook-f"> Facebook</span>
+                            </a>
+                        </li>
+                        <li style="float: left;list-style: none;margin-left: 10px">
+                            <a class="" href="#">
+                                <span class="badge badge-info fab fa-instagram"> Instagram</span>
+                            </a>
+                        </li>
+                        <li style="float: left;list-style: none;margin-left: 10px">
+                            <a class="" href="#">
+                                <span class="badge badge-info fab fa-twitter">Twitter</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav ml-auto col-xs-5">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                <button type="submit" data-toggle="modal" data-target="#myModal"
+                                    class="btn btn-outline-primary text-center"
+                                    style="height: 20px;font-size: 10px;line-height: 5px;font-weight: bold">Đăng
+                                    nhập</button>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <button type="button" class="btn btn-outline-info text-center"
+                                    style="height: 20px;font-size: 10px;line-height: 5px;font-weight: bold"> Đăng
+                                    ký</button>
+
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="myModal">
+            <div class="modal-dialog modal-xs modal-sm modal-md modal-lg">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Đăng nhập tài khoản</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <form action="#" method="POST" name="frmbai4">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 mt-3 ">
+                                    <input id="manv04" name="manv04" type="text" class="form-control"
+                                        placeholder="Tên đăng nhập">
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-6 mt-3">
+                                    <input id="hvt04" name="hvt04" type="text" class="form-control"
+                                        placeholder="Mật khẩu">
+                                </div>
+                            </div>
+                            <br>
+                            <!-- Modal footer -->
+                            <div class="modal-footer row">
+                                <button type="submit" class="btn btn-outline-dark" data-toggle="tooltip"
+                                    data-placement="top" title="Lưu thông tin!"><i class="far fa-save"></i> Đăng
+                                    nhập</button>
+                                <button type="submit" class="btn btn-outline-dark" data-dismiss="modal"
+                                    data-toggle="tooltip" data-placement="top" title="Hủy bỏ!"> <i
+                                        class="fas fa-square"></i> Hủy</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 ">
+                    <a href="index.html" style="text-decoration: none">
+                        <h1 class="shopping-mail">Quang SmartPhone</h1>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 mt-3">
+                    <a href="#">
+                        <span class="fas fa-shopping-cart" style="color: orange">
+                            Giỏ hàng
+                            <span class="badge  badge-warning">0</span>
+                        </span>
+
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="container-fluid bg-light">
+            <nav class="navbar navbar-expand-sm navbar-expand-md navbar-expand-lg navbar-warning container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fas fa-list"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link fas fa-home" href="index.html">Trang chủ <span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle fas fa-gifts" href="product.html" id="navbarDropdown"
+                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Sản phẩm
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item " href="product.html">Điện thoại</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="product.html">Máy tính bảng</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link far fa-newspaper" href="news.html" style="font-weight: bold"> Tin tức</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link far fa-id-card" href="contact.html" style="font-weight: bold"> Liên
+                                hệ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link far fas fa-user-cog" href="maneger.html" style="font-weight: bold">
+                                Trang quản trị
+                            </a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section class="container" ng-controller="myCtrl">
+        <div class="row mt-3">
+            <article class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                <a href="index.html">Trang chủ</a> > <a href="product details.html">Chi tiết sản phẩm</a>
+                <br>
+                <hr>
+                <div class="row">
+                    <h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{chitietsp.tensp}}
+                        <img src="images/star.png" alt="Sao" title="Chất lượng" class="img-fluid mx-auto">
+                        <img src="images/star.png" alt="Sao" title="Chất lượng" class="img-fluid mx-auto">
+                        <img src="images/star.png" alt="Sao" title="Chất lượng" class="img-fluid mx-auto">
+                        <img src="images/star.png" alt="Sao" title="Chất lượng" class="img-fluid mx-auto">
+                        <img src="images/favorite.png" alt="Sao" title="Chất lượng" class="img-fluid mx-auto">
+                    </h3>
+                    <br>
+                    <img src="images/{{chitietsp.hinhanh}}" style="height: 350px;overflow: hidden;"
+                        class="img-fluid col-xs-12 col-sm-4 col-md-4 col-lg-4" title="Chi tiết sản phẩm" alt="IPhone X">
+
+                    <ul class="list-group col-xs-12 col-sm-8 col-md-8">
+                        <li class="list-group-item">Tên sản phẩm: {{chitietsp.tensp}}</li>
+                        <li class="list-group-item text-danger">Đơn giá: {{chitietsp.giamoi}} - <strike
+                                class="text-muted">{{chitietsp.giacu}}</strike> </li>
+                        <li class="list-group-item">Thương hiệu: <span class="badge badge-success">
+                                {{chitietsp.thuonghieu}}</span>
+                        </li>
+                        <li class="list-group-item">Tình trạng: <span
+                                class="badge badge-warning">{{chitietsp.tinhtrang}}</span> </li>
+                        <li class="list-group-item">Dung lượng: <span
+                                class="badge badge-info">{{chitietsp.dungluong}}</span> </li>
+                        <li class="list-group-item ">Xuất sứ: {{chitietsp.xuatsu}}</li>
+                        <li class="list-group-item">
+                            <button type="button" class="btn btn-danger ">Mua ngay</button>
+                            <button type="button" class="btn btn-primary ml-5">Mua trả góp</button>
+                        </li>
+                    </ul>
+                </div>
+                <hr>
+                <h4>Hình ảnh khác :</h4>
+                <div class="row">
+                    <img src="images/{{chitietsp.hinhanh}}" style="height: 55px;"
+                        class=" img-thumbnail  col-3 col-sm-1 col-md-1 col-lg-1 mr-2" alt="Hình ảnh chi tiết sản phẩm">
+                    <img src="images/{{chitietsp.hinhanh}}" style="height: 55px; "
+                        class=" img-thumbnail col-3 col-sm-1 col-md-1 col-lg-1 mr-2" alt="Hình ảnh chi tiết sản phẩm">
+                    <img src="images/{{chitietsp.hinhanh}}" style="height: 55px;"
+                        class="img-thumbnail  col-3 col-sm-1 col-md-1 col-lg-1 mr-2" alt="Hình ảnh chi tiết sản phẩm">
+                    <img src="images/{{chitietsp.hinhanh}}" style="height: 55px;"
+                        class=" img-thumbnail  col-3 col-sm-1 col-md-1 col-lg-1 mr-2" alt="Hình ảnh chi tiết sản phẩm">
+                    <img src="images/{{chitietsp.hinhanh}}" style="height: 55px;"
+                        class=" img-thumbnail  col-3 col-sm-1 col-md-1 col-lg-1 mr-2" alt="Hình ảnh chi tiết sản phẩm">
+                    <img src="images/{{chitietsp.hinhanh}}" style="height: 55px;"
+                        class=" img-thumbnail  col-3 col-sm-1 col-md-1 col-lg-1" alt="Hình ảnh chi tiết sản phẩm">
+
+                </div>
+            </article>
+            <aside class="col-xs-12 col-sm-3 col-md-3 col-lg-3 mt-5">
+                <ul class="list-group">
+
+                    <li class="list-group-item fas fa-th-list text-body"
+                        style="font-weight: bold;background: cadetblue">
+                        PHÂN LOẠI
+                    </li>
+                    <li class="list-group-item list-group-item-action">Dưới 2 triệu
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        <span class="badge badge-secondary">10</span>
+                    </li>
+                    <li class="list-group-item list-group-item-action">Từ 2-4 triệu
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        <span class="badge badge-secondary">19</span>
+                    </li>
+                    <li class="list-group-item list-group-item-action">Từ 4-7 triệu
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        <span class="badge badge-secondary">7</span>
+                    </li>
+                    <li class="list-group-item list-group-item-action">Từ 7-13 triệu
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        <span class="badge badge-secondary">30</span>
+                    </li>
+                    <li class="list-group-item list-group-item-action">Trên 13 triệu
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        &nbsp;
+                        <span class="badge badge-secondary">12</span>
+                    </li>
+                    <li class="list-group-item list-group-item-action"> Từ 17-20 triệu
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+                        <span class="badge badge-secondary">28</span>
+                    </li>
+                    <li class="list-group-item list-group-item-action"> Trên 20 triệu
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        <span class="badge badge-secondary">28</span>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+        <br>
+        <hr>
+        <div class="row" style="background-color: azure">
+        </div>
+    </section>
+    <footer id="footer" class="mt-2">
+        <!-- Footer -->
+        <div class="container">
+            <div class="row text-center text-xs-center text-sm-left text-md-left">
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                    <h5>Chăm sóc khách hàng</h5>
+                    <ul class="list-unstyled quick-links">
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Trung tâm trợ
+                                giúp</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Hướng dẫn mua
+                                hàng</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Thanh toán</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Vận chuyển</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Chính sách bảo
+                                hành</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                    <h5>Về cửa hàng</h5>
+                    <ul class="list-unstyled quick-links">
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Giới thiệu về cửa
+                                hàng</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Tuyển dụng</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Điều khoản</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Chính sách bảo
+                                mật</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Kênh người bán</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                    <h5>Chính sách</h5>
+                    <ul class="list-unstyled quick-links">
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Chính sách mua
+                                hàng</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Chính sách đãi
+                                ngộ</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Thông tin khách
+                                hàng</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Thông tin tuyển
+                                dụng</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Bảo mật</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                    <h5>Liên hệ</h5>
+                    <ul class="list-unstyled quick-links">
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>218,Xã
+                                EaÔ,Eakar,ĐắkLắk</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Điện
+                                thoại:0379850696</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Fax: 0123456789</a>
+                        </li>
+                        <li><a href="javascript:void();"><i
+                                    class="fa fa-angle-double-right"></i>Email:Quang850696@gmail.com</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Trực tuyến:
+                                24/7</a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5  text-center">
+                    <img src="images/dathongbao.png" width="200" class="img-fluid">
+                    <img src="images/dadangky.png" width="200" class="img-fluid">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+                    <ul class="list-unstyled list-inline social text-center">
+                        <li class="list-inline-item"><a href="javascript:void();">
+                                <i class="fab fa-facebook-square"></i></a>
+                        </li>
+                        <li class="list-inline-item"><a href="javascript:void();"><i
+                                    class="fab fa-twitter-square"></i></i></a>
+                        </li>
+                        <li class="list-inline-item"><a href="javascript:void();"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li class="list-inline-item"><a href="javascript:void();">
+                                <i class="fab fa-google"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void();" target="_blank"><i
+                                    class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+                </hr>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+                    <p class="h6">&copy Bản quyền thuộc về Quangdvpk00884_ASSIGNMENT_Front-End Frameworks.</p>
+                </div>
+                </hr>
+            </div>
+        </div>
+        <!-- ./Footer -->
+    </footer>
+
+</body>
+
+</html>

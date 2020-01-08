@@ -1,0 +1,435 @@
+<div class="row  mt-2">
+    <div id="demo" class="carousel slide col-xs-12 col-sm-7 col-md-7 col-lg-7" data-ride="carousel">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+            <li data-target="#demo" data-slide-to="3"></li>
+        </ul>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/slider_1.jpg" alt="Los Angeles" class="img-fluid">
+            </div>
+            <div class="carousel-item">
+                <img src="images/slider_3.jpg" alt="Chicago" class="img-fluid">
+            </div>
+            <div class="carousel-item">
+                <img src="images/slider_4.jpg" alt="New York" class="img-fluid">
+            </div>
+            <div class="carousel-item">
+                <img src="images/slider_5.jpg" alt="New York" class="img-fluid">
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+
+    </div>
+    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+        <div class="card">
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-info" style="height: 47px;">
+                    <marquee behavior="" direction="">
+                        <a href="#!new" style="font-weight: bold" class="fas fa-newspaper"> TIN CÔNG NGHỆ</a>
+                    </marquee>
+                </li>
+                <li class="list-group-item" ng-repeat="tt in tintuc01">
+                    <a href="#!new">
+                        <div class="row">
+                            <div class="col-3 col-sm-3 col-md-3 col-lg-3">
+                                <img src="images/{{tt.hinhanh}}" alt="Tin tức Oppo" style="width:50%px"
+                                    class="img-fluid">
+                            </div>
+                            <div class="col-9 col-sm-9 col-md-9 col-lg-9"
+                                style="padding:0px;color: black;font-size: 14px">
+                                {{tt.noidung}}
+                                &nbsp;
+                                <span class="text-muted"><i class="far fa-calendar-alt"></i>
+                                    {{tt.ngaydang}}</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+</div>
+<div class="row mt-2">
+    <img src="images/quangcao.png" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 img-fluid mx-auto img-thumbnail">
+</div>
+<!-- Sản phẩm giá sốc cuối tuần -->
+<div class="row mt-2">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 bg-danger">
+        <h3 class="text-center text-warning" style="font-weight: bold">GIÁ SỐC CUỐI TUẦN</h3>
+    </div>
+    <div class="col-6 col-sm-3 col-md-3 col-lg-3 mt-2 mb-2"
+        ng-repeat="sp in sanphamgscuoituan| filter:ngSearch |limitTo:4:17">
+        <ul class="list-group">
+            <li class="list-group-item text-center list-group-item-info">{{sp.tensp}}</li>
+            <li class="list-group-item hovereffect">
+                <a class="img-responsive" href="product details.html">
+                    <img src="images/{{sp.hinhanh}}" alt="Điện thoại"
+                        class="mx-auto img-fluid text-center text-xs-center text-sm-left text-md-left"
+                        title="Sản phảm giá sốc cuối tuần">
+                </a>
+                <div class="overlay">
+                    <h2>Thông số cấu hình:</h2>
+                    <ul>
+                        <li class="ttct info">Màn hình: {{sp.Screen}}</li>
+                        <li class="ttct info">Ram: {{sp.Ram}}</li>
+                        <li class="ttct info">Rom: {{sp.Rom}}</li>
+                        <li class="ttct info">Camera: {{sp.Camera}}</li>
+                        <li class="ttct info">CPU: {{sp.CPU}}</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="list-group-item text-center text-danger">{{sp.gianhap}}{{u.gianhap}} <sup><u>đ</u></sup> - <span
+                    class="text-muted">
+                    <strike>{{sp.giaban}} {{u.gianhap}} <sup><u>đ</u></sup></strike></span>
+                <br>
+
+                <button type="button" data-toggle="modal" data-target="#myModal{{$index}}" class="btn btn-info"
+                    style="width: 60px"><i class="fas fa-info-circle"></i></button>
+
+                <button type="button" class="btn btn-warning" style="width: 60px" ng-click="add_cart(sp)"><i
+                        class="fas fa-shopping-basket"></i></button>
+
+            </li>
+        </ul>
+        <!-- Modal hiển thị chi tiết sản phẩm -->
+        <div class="modal" id="myModal{{$index}}">
+            <div class="modal-dialog modal-xs modal-sm modal-md modal-lg">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title text-primary">Thông tin chi tiết sản phẩn</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="row">
+                            <h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{sp.tensp}}
+                                <img src="images/star.png" alt="Sao" title="Chất lượng" class="img-fluid mx-auto">
+                                <img src="images/star.png" alt="Sao" title="Chất lượng" class="img-fluid mx-auto">
+                                <img src="images/star.png" alt="Sao" title="Chất lượng" class="img-fluid mx-auto">
+                                <img src="images/star.png" alt="Sao" title="Chất lượng" class="img-fluid mx-auto">
+                                <img src="images/favorite.png" alt="Sao" title="Chất lượng" class="img-fluid mx-auto">
+                            </h3>
+                            <br>
+                            <img src="images/{{sp.hinhanh}}" style="height:250px;overflow: hidden;"
+                                class="img-fluid col-xs-12 col-sm-4 col-md-4 col-lg-4" title="Chi tiết sản phẩm"
+                                alt="IPhone X">
+
+                            <ul class="list-group col-xs-12 col-sm-8 col-md-8">
+                                <li class="list-group-item text-info">Tên sản phẩm:{{sp.tensp}}</li>
+                                <li class="list-group-item text-danger">Đơn giá: {{sp.gianhap}}
+                                    <sup><u>đ</u></sup> -<strike class="text-muted">{{sp.giaban}}
+                                        <sup><u>đ</u></sup></strike> </li>
+                                <li class="list-group-item text-info">Thương hiệu: <span class="badge badge-success">
+                                        {{sp.hangsanxuat}}</span>
+                                </li>
+                                <li class="list-group-item text-info">Tình trạng: <span class="badge badge-warning">Còn
+                                        hàng</span> </li>
+                                <li class="list-group-item text-info">Dung lượng: <span
+                                        class="badge badge-info">{{sp.Rom}}</span> </li>
+                                <li class="list-group-item  text-info">Xuất sứ: {{sp.xuatsu}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- Sản phẩm tiêu biểu -->
+<div class="row mt-2">
+
+    <ul class="nav mr-auto col-xs-5">
+        <li class="nav-item">
+            <a class="nav-link" href="#!product">
+                <h5>Sản phẩm nổi bật</h5>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav ml-auto col-xs-5">
+        <li class="nav-item">
+            <a class="nav-link" href="product.html">Samsung</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="product.html">Apple</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="product.html">LG</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="product.html">Sony</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="product.html">Htc</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="product.html">Xiaomi</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="product.html">Nokia</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="product.html">Vivo</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="product.html">Oppo</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="product.html">Huawei</a>
+        </li>
+    </ul>
+    <div class="col-xs-12 col-sm-12 col-md-12 ">
+        <hr>
+        <div class="row">
+            <div class="col-6 col-sm-3 col-md-3 col-lg-3"
+                ng-repeat="b in dssanphamnoibat | filter:ngSearch|limitTo:4:5">
+                <ul class="list-group">
+                    <li class="list-group-item text-center list-group-item-info">{{b.tensp}}</li>
+                    <li class="list-group-item hovereffect">
+                        <a href="product details.html"> <img src="images/{{b.hinhanh}}" alt="Điện thoại"
+                                title="Sản phẩm nối bật" class="img-fluid mx-auto">
+                        </a>
+                        <div class="overlay">
+                            <h2>Thông số cấu hình:</h2>
+                            <ul>
+                                <li class="ttct info">Màn hình: {{b.Screen}}</li>
+                                <li class="ttct info">Ram: {{b.Ram}}</li>
+                                <li class="ttct info">Rom: {{b.Rom}}</li>
+                                <li class="ttct info">Camera: {{b.Camera}}</li>
+                                <li class="ttct info">CPU: {{b.CPU}}</li>
+                            </ul>
+                            <!-- <a class="info" href="#!" >Chi tiết sản
+                                phẩm</a> -->
+                        </div>
+                    </li>
+                    <li class="list-group-item text-center text-danger">{{b.giaban}}{{u.gianhap}} <sup><u>đ</u></sup>
+                        <br>
+                        <a href="#home" style=" text-decoration: none;">
+                            <button type="button" data-toggle="modal" data-target="#myModall{{$index}}"
+                                class="btn btn-info" style="width: 60px"><i class="fas fa-info-circle"></i></button>
+                        </a>
+                        <a href="#home" style=" text-decoration: none;">
+                            <button type="button" class="btn btn-warning" style="width: 60px" ng-click="add_cart(b)"><i
+                                    class="fas fa-shopping-basket"></i></button>
+                        </a>
+                    </li>
+                </ul>
+                <!-- Modal hiển thị chi tiết sản phẩm -->
+                <div class="modal" id="myModall{{$index}}">
+                    <div class="modal-dialog modal-xs modal-sm modal-md modal-lg">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title text-primary">Thông tin chi tiết sản phẩn</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <div class="row">
+                                    <h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{b.tensp}}
+                                        <img src="images/star.png" alt="Sao" title="Chất lượng"
+                                            class="img-fluid mx-auto">
+                                        <img src="images/star.png" alt="Sao" title="Chất lượng"
+                                            class="img-fluid mx-auto">
+                                        <img src="images/star.png" alt="Sao" title="Chất lượng"
+                                            class="img-fluid mx-auto">
+                                        <img src="images/star.png" alt="Sao" title="Chất lượng"
+                                            class="img-fluid mx-auto">
+                                        <img src="images/favorite.png" alt="Sao" title="Chất lượng"
+                                            class="img-fluid mx-auto">
+                                    </h3>
+                                    <br>
+                                    <img src="images/{{b.hinhanh}}" style="height:250px;overflow: hidden;"
+                                        class="img-fluid col-xs-12 col-sm-4 col-md-4 col-lg-4" title="Chi tiết sản phẩm"
+                                        alt="IPhone X">
+
+                                    <ul class="list-group col-xs-12 col-sm-8 col-md-8">
+                                        <li class="list-group-item text-info">Tên sản phẩm:{{b.tensp}}</li>
+                                        <li class="list-group-item text-danger">Đơn giá: {{b.gianhap}}
+                                            <sup><u>đ</u></sup> -<strike class="text-muted">{{b.giaban}}
+                                                <sup><u>đ</u></sup></strike> </li>
+                                        <li class="list-group-item text-info">Thương hiệu: <span
+                                                class="badge badge-success">
+                                                {{b.hangsanxuat}}</span>
+                                        </li>
+                                        <li class="list-group-item text-info">Tình trạng: <span
+                                                class="badge badge-warning">Còn
+                                                hàng</span> </li>
+                                        <li class="list-group-item text-info">Dung lượng: <span
+                                                class="badge badge-info">{{b.Rom}}</span> </li>
+                                        <li class="list-group-item  text-info">Xuất sứ: {{b.xuatsu}}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row mt-2">
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+        <hr>
+        <hr>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center">
+        <h2>SẢN PHẨM BÁN CHẠY</h2>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+        <hr>
+        <hr>
+    </div>
+</div>
+<!-- Sản phẩm hiển thị theo danh mục -->
+<div class="row mt-2 mb-2 mt-3">
+    <aside class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+        <ul class="list-group">
+            <li class="list-group-item fas fa-th-list text-body" style="font-weight: bold;background: chocolate">
+                PHÂN LOẠI
+            </li>
+            <li class="list-group-item list-group-item-action" ng-repeat="dm in dmspbanchay">
+                <a href="product.html" style="text-decoration: none" class="text-muted">{{dm.tendm}}</a>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                <span class="badge badge-secondary">{{dm.soluong}}</span>
+            </li>
+        </ul>
+    </aside>
+    <article class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+        <div class="row">
+            <div class="col-4 col-sm-4 col-md-4 mb-3 mt-2"
+                ng-repeat="u in sanphambanchay| filter:ngSearch|limitTo:3:2">
+                <ul class="list-group">
+                    <li class="list-group-item text-center list-group-item-info">{{u.tensp}}</li>
+                    <li class="list-group-item hovereffect">
+                        <a href="product details.html">
+                            <img src="images/{{u.hinhanh}}" alt="Điện thoại" class="img-fluid mx-auto">
+                        </a>
+                        <div class="overlay">
+                            <h2>Thông số cấu hình:</h2>
+                            <ul>
+                                <li class="ttct info">Màn hình: {{u.Screen}}</li>
+                                <li class="ttct info">Ram: {{u.Ram}}</li>
+                                <li class="ttct info">Rom: {{u.Rom}}</li>
+                                <li class="ttct info">Camera: {{u.Camera}}</li>
+                                <li class="ttct info">CPU: {{u.CPU}}</li>
+                            </ul>
+                            <!-- <a class="info" href="product details.html">Chi tiết sản phẩm</a> -->
+                        </div>
+                    </li>
+                    <li class="list-group-item text-center text-danger">{{u.gianhap}} <sup><u>đ</u></sup>
+                        <br>
+
+                        <button type="button" data-toggle="modal" data-target="#myModalls{{$index}}"
+                            class="btn btn-info" style="width: 60px"><i class="fas fa-info-circle"></i></button>
+
+
+                        <button type="button" class="btn btn-warning" style="width: 60px" ng-click="add_cart(u)"><i
+                                class="fas fa-shopping-basket"></i></button>
+
+                    </li>
+                </ul>
+                <!-- Modal hiển thị chi tiết sản phẩm -->
+                <div class="modal" id="myModalls{{$index}}">
+                    <div class="modal-dialog modal-xs modal-sm modal-md modal-lg">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title text-primary">Thông tin chi tiết sản phẩn</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <div class="row">
+                                    <h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{u.tensp}}
+                                        <img src="images/star.png" alt="Sao" title="Chất lượng"
+                                            class="img-fluid mx-auto">
+                                        <img src="images/star.png" alt="Sao" title="Chất lượng"
+                                            class="img-fluid mx-auto">
+                                        <img src="images/star.png" alt="Sao" title="Chất lượng"
+                                            class="img-fluid mx-auto">
+                                        <img src="images/star.png" alt="Sao" title="Chất lượng"
+                                            class="img-fluid mx-auto">
+                                        <img src="images/favorite.png" alt="Sao" title="Chất lượng"
+                                            class="img-fluid mx-auto">
+                                    </h3>
+                                    <br>
+                                    <img src="images/{{u.hinhanh}}" style="height:250px;overflow: hidden;"
+                                        class="img-fluid col-xs-12 col-sm-4 col-md-4 col-lg-4" title="Chi tiết sản phẩm"
+                                        alt="IPhone X">
+
+                                    <ul class="list-group col-xs-12 col-sm-8 col-md-8">
+                                        <li class="list-group-item text-info">Tên sản phẩm:{{u.tensp}}</li>
+                                        <li class="list-group-item text-danger">Đơn giá: {{u.gianhap}}<sup><u>đ</u></sup>
+                                            -<strike class="text-muted">{{u.giaban}}
+                                                <sup><u>đ</u></sup></strike> </li>
+                                        <li class="list-group-item text-info">Thương hiệu: <span
+                                                class="badge badge-success">
+                                                {{u.hangsanxuat}}</span>
+                                        </li>
+                                        <li class="list-group-item text-info">Tình trạng: <span
+                                                class="badge badge-warning">Còn
+                                                hàng</span> </li>
+                                        <li class="list-group-item text-info">Dung lượng: <span
+                                                class="badge badge-info">{{u.Rom}}</span> </li>
+                                        <li class="list-group-item  text-info">Xuất sứ: {{u.xuatsu}}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+</div>
+<div class="row mt-3">
+    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+        <h3 class="far fa-newspaper"> Tin tức trong tuần</h3>
+    </div>
+    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+        <hr>
+        <hr>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 col-sm-3 col-md-3 col-lg-3 card " ng-repeat="x in tintuc02">
+        <div class="hovereffect">
+
+            <img src="images/{{x.hinhanh}}" alt="Tin tức 01" class="img-fluid rounded mx-auto mt-4">
+            <div class="overlay">
+                <a class="info" href="#!new">Đọc thêm</a>
+            </div>
+        </div>
+
+        <p style="font-size: 13px" class="text-xs-center text-sm-left text-md-left">{{x.noidung}}<br>
+            <span class="badge badge-info   fas fa-clock"> {{x.thoigian}}</span>
+            &nbsp; <i class="fas fa-calendar"></i><span class="badge badge-light"> {{x.date}}</span>
+        </p>
+
+
+    </div>

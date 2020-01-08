@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-sm navbar-expand-md navbar-expand-lg navbar-warning container">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon fas fa-list"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link fas fa-home" href="#!home">Trang chủ <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle fas fa-gifts" href="#!product" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Sản phẩm
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item " href="#!product">Điện thoại</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#!product">Máy tính bảng</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link far fa-newspaper" href="#!new" style="font-weight: bold"> Tin tức</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link far fa-id-card" href="#!contact" style="font-weight: bold"> Liên
+                    hệ</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link far fas fa-user-cog" href="maneger.html" style="font-weight: bold">
+                    Trang quản trị
+                </a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" ng-model="ngSearch" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>

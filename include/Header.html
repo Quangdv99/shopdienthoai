@@ -1,0 +1,170 @@
+<div class="container-fluid bg-warning">
+    <div class="container">
+        <div class="row">
+            <ul class="mr-auto col-xs-7 col-sm-7 col-md-7 col-lg-7 mt-1">
+                <li style="float: left;list-style: none;">
+                    <a class="active" href="#">
+                        <span class="badge badge-primary fas fa-link"> Follow :</span>
+                    </a>
+                </li>
+                <li style="float: left;list-style: none; margin-left: 10px">
+                    <a class="" href="#">
+                        <span class="badge badge-primary fab fa-facebook-f"> Facebook</span>
+                    </a>
+                </li>
+                <li style="float: left;list-style: none;margin-left: 10px">
+                    <a class="" href="#">
+                        <span class="badge badge-info fab fa-instagram"> Instagram</span>
+                    </a>
+                </li>
+                <li style="float: left;list-style: none;margin-left: 10px">
+                    <a class="" href="#">
+                        <span class="badge badge-info fab fa-twitter">Twitter</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="nav ml-auto col-xs-5">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">
+                        <button type="submit" data-toggle="modal" data-target="#myModal"
+                            class="btn btn-outline-primary text-center"
+                            style="height: 20px;font-size: 10px;line-height: 5px;font-weight: bold">Đăng
+                            nhập</button>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <button type="button" class="btn btn-outline-info text-center"
+                            style="height: 20px;font-size: 10px;line-height: 5px;font-weight: bold"> Đăng
+                            ký</button>
+
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="modal" id="myModal">
+    <div class="modal-dialog modal-xs modal-sm modal-md modal-lg">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title text-primary" style="font-weight: bold">Đăng nhập tài khoản</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form action="#!" method="POST" name="frmLogin">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 mt-3 ">
+                            <input id="manv04" name="txtTendn" ng-model="tendn" type="text" class="form-control"
+                                placeholder="Tên đăng nhập">
+                                <span ng-show="frmLogin.txtTendn.$invalid" class="text" class="text-danger">Vui lòng điền tên đăng nhập</span>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 mt-3">
+                            <input id="hvt04" name="hvt04" type="text" class="form-control" placeholder="Mật khẩu">
+                        </div>
+                    </div>
+
+                    <br>
+                    <!-- Modal footer -->
+                    <div class="modal-footer row">
+                        <button type="submit" class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top"
+                            title="Lưu thông tin!"><i class="far fa-save"></i> Đăng
+                            nhập</button>
+                        <button type="submit" class="btn btn-outline-dark" data-dismiss="modal" data-toggle="tooltip"
+                            data-placement="top" title="Hủy bỏ!"> <i class="fas fa-square"></i> Hủy</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--  -->
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 ">
+            <a href="index.html" style="text-decoration: none">
+                <h1 class="shopping-mail">Quang SmartPhone</h1>
+            </a>
+        </div>
+        <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 mt-3">
+            <a href="#" data-toggle="modal" data-target="#exampleModal">
+                <span class="fas fa-shopping-cart" style="color: orange">
+                    Giỏ hàng {{getAmount()}}
+                    <span class="badge  badge-warning"></span>
+                </span>
+
+            </a>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-xs modal-sm modal-md modal-lg" role="document">
+                    <div class="modal-content ">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-success" style="font-weight: bold;font-size: 40px;" id="exampleModalLabel">Giỏ hàng của bạn <i class="fas fa-shopping-cart"></i></h5>
+                            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button> -->
+                            <button type="button " class="ml-auto btn btn-warning" ng-click="clearCart();">Xóa tất cả</button>
+
+                        </div>
+                        <div class="modal-body">
+                            <table
+                                class="table table-hover table-responsive-xs table-responsive-sm table-responsive-md table-responsive-lg">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">STT</th>
+                                        <th scope="col">Tên sản phẩm</th>
+                                        <th scope="col">Giá giá bán</th>
+                                        <th scope="col">Số lượng</th>
+                                        <th scope="col">Hình</th>
+                                        <th scope="col">Đơn giá</th>
+                                        <th scope="col">Xóa</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="animate-repeat" ng-repeat="cart in carts" ng-init="setTotals(cart)">
+                                        <th scope="row">{{$index}}</th>
+                                        <td>{{cart.tensp}}</td>
+                                      
+                                        <td>{{cart.giaban|number:0}}</td>
+                                        <td>
+                                            <input type="number" ng-model="cart.quantity" placeholder="1">
+                                        </td>
+                                        <td>
+                                            <img src="images/{{cart.hinhanh}}" class="img-fluid" style="width: 100px"
+                                                alt="{{cart.hinhanh}}">
+                                        </td>
+                                      
+                                        <td>{{cart.giaban * cart.quantity |number:0}}</td>
+                                        <td>
+                                            <button class="btn btn-danger" ng-click="remove_cart(cart)">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <hr>
+                            <h5 class="text-danger">Tổng tiền:{{getTotal() | number:0}} <sup><u>đ</u></sup></h5>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary"
+                                onclick="alert('Nội dung đang được xây dựng !')">Tiền hành đặt hàng</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+        </div>
+    </div>
+
+
+</div>
+<div class="container-fluid bg-light" ng-include="'include/Menu.html'"></div>

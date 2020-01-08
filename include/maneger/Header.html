@@ -1,0 +1,118 @@
+<div class="container-fluid bg-warning">
+    <div class="container">
+        <div class="row">
+            <ul class="mr-auto col-xs-7 col-sm-7 col-md-7 col-lg-7 mt-1">
+                <li style="float: left;list-style: none;">
+                    <a class="active" href="#">
+                        <span class="badge badge-primary fas fa-link"> Follow :</span>
+                    </a>
+                </li>
+                <li style="float: left;list-style: none; margin-left: 10px">
+                    <a class="" href="#">
+                        <span class="badge badge-primary fab fa-facebook-f"> Facebook</span>
+                    </a>
+                </li>
+                <li style="float: left;list-style: none;margin-left: 10px">
+                    <a class="" href="#">
+                        <span class="badge badge-info fab fa-instagram"> Instagram</span>
+                    </a>
+                </li>
+                <li style="float: left;list-style: none;margin-left: 10px">
+                    <a class="" href="#">
+                        <span class="badge badge-info fab fa-twitter">Twitter</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="nav ml-auto col-xs-5">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">
+                        <button type="submit" data-toggle="modal" data-target="#myModal"
+                            class="btn btn-outline-primary text-center"
+                            style="height: 20px;font-size: 10px;line-height: 5px;font-weight: bold">Admin</button>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="modal" id="myModal">
+    <div class="modal-dialog modal-xs modal-sm modal-md modal-lg">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Đăng nhập tài khoản</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form action="#" method="POST" name="frmbai4">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 mt-3 ">
+                            <input id="manv04" name="manv04" type="text" class="form-control"
+                                placeholder="Tên đăng nhập">
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 mt-3">
+                            <input id="hvt04" name="hvt04" type="text" class="form-control" placeholder="Mật khẩu">
+                        </div>
+                    </div>
+                    <br>
+                    <!-- Modal footer -->
+                    <div class="modal-footer row">
+                        <button type="submit" class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top"
+                            title="Lưu thông tin!"><i class="far fa-save"></i> Đăng
+                            nhập</button>
+                        <button type="submit" class="btn btn-outline-dark" data-dismiss="modal" data-toggle="tooltip"
+                            data-placement="top" title="Hủy bỏ!"> <i class="fas fa-square"></i> Hủy</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--  -->
+<div class="container">
+    <div class="row mb-2 mt-2">
+        <a href="index.html" style="text-decoration: none">
+            <h1 class="shopping-mail">Trang quản trị hệ thống</h1>
+        </a>
+        <img src="images/admin.png" alt="">
+    </div>
+
+</div>
+<div class="container-fluid bg-light">
+    <nav class="navbar navbar-expand-sm navbar-expand-md navbar-expand-lg navbar-warning container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon fas fa-list"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link fas fa-home" href="index.html">Trang chủ <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle fas fa-cog" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Quản lý
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="maneger.html">Sản phẩm</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="maneger_money.html">Lương thưởng nhân viên</a>
+                    </div>
+                </li>
+            </ul>
+            <form method="POST" class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" ng-model="strSearch"  placeholder="Search"
+                    >
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+</div>
